@@ -3,7 +3,7 @@
   "version": "4.0.5",
   "description": "The Spectrum CSS menu component",
   "license": "Apache-2.0",
-  "main": "dist/index-vars.css",
+  "main": "dist/index.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/adobe/spectrum-css.git",
@@ -18,13 +18,13 @@
   "peerDependencies": {
     "@spectrum-css/divider": "^1.0.23",
     "@spectrum-css/icon": "^3.0.21",
-    "@spectrum-css/vars": "^8.0.0"
+    "@spectrum-css/tokens": "^1.0.6"
   },
   "devDependencies": {
-    "@spectrum-css/component-builder": "^3.2.1",
+    "@spectrum-css/component-builder-simple": "^1.0.0-beta",
     "@spectrum-css/divider": "^1.0.27",
-    "@spectrum-css/icon": "^3.0.24",
-    "@spectrum-css/vars": "^8.0.0",
+    "@spectrum-css/icon": "^3.0.23",
+    "@spectrum-css/tokens": "^1.0.6",
     "gulp": "^4.0.0"
   },
   "publishConfig": {
