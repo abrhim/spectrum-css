@@ -1468,6 +1468,38 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/closebutton/-/closebutton-1.2.13.tgz#a02a33e211349138bcde0988cd4317749a7618e4"
   integrity sha512-V/P/XVWPh/TR2Qo66vn6o+vi5/utDbrMIdNV+zuF1dbl1wxH5QMOdCQrQOtzHrzcwulJRu3+Sk759VRPojLYCA==
 
+"@spectrum-css/component-builder-simple@^1.0.0-beta":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/component-builder-simple/-/component-builder-simple-1.0.0.tgz#74266a6de2624598b76cf02b37baf3c8a0f5fd98"
+  integrity sha512-hArQCqO9voXZWOAjaKGn7zhTmyYkV2atp9upgV1p7VsE36zBa9iqoS8CFTVsY/itQj/O9zxUswB7ZrtB44/Drw==
+  dependencies:
+    autoprefixer "^6.5.3"
+    del "^5.0.0"
+    gulp "^4.0.0"
+    gulp-concat "^2.6.1"
+    gulp-postcss "^7.0.0"
+    gulp-rename "^1.4.0"
+    postcss "^7.0.36"
+    postcss-calc "^6.0.0"
+    postcss-combininator "^1.0.0-beta.1"
+    postcss-discard-empty "^4.0.1"
+    postcss-dropdupedvars "^1.1.2"
+    postcss-dropunusedvars "^1.2.1"
+    postcss-focus-ring "^1.0.0"
+    postcss-import "^10.0.0"
+    postcss-inherit "^4.0.3"
+    postcss-mixins "^6.2.1"
+    postcss-nested "^3.0.0"
+    postcss-selector-parser "^6.0.2"
+    postcss-splitinator "^1.0.0-beta.1"
+    postcss-values-parser "^3.1.1"
+    through2 "^3.0.1"
+
+"@spectrum-css/divider@2.0.0-beta.0":
+  version "2.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/divider/-/divider-2.0.0-beta.0.tgz#6f8b6eddc7ef9e5aaaccf61176b26b42b7018ec0"
+  integrity sha512-CQfWB3skkraiSVHoLl8ZYO+WWac8DDFrYcmO1pHonX1F+6NbvyMFPaBinnPGE9wa1gZOMEYfE8bXebG8+ydLSw==
+
 "@spectrum-css/divider@^1.0.27":
   version "1.0.27"
   resolved "https://registry.yarnpkg.com/@spectrum-css/divider/-/divider-1.0.27.tgz#435bf738a65b4eb15c899edf5c536bea22f2d679"
@@ -1494,6 +1526,11 @@
   version "1.0.46"
   resolved "https://registry.yarnpkg.com/@spectrum-css/spectrum-css-vr-test-assets-essential/-/spectrum-css-vr-test-assets-essential-1.0.46.tgz#8a8c9007003f5c7c1501b3a0ecb721f751f9f68b"
   integrity sha512-09KcehdKIxpVTxmC3bkaCGiLwbxakFNZIirGQlwryu0qnuu1uzst+ELnZdh0s/O2akfmo43PRbaKiIL0x23NQg==
+
+"@spectrum-css/tokens@^1.0.6":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/tokens/-/tokens-1.0.8.tgz#2eb52b1b895668d09cf2dc2d4bf9f6a1f00a8cc5"
+  integrity sha512-IzfHeojEjE6G+YeZ/Rrwz31471V09dxBZ9RLloUpHUcLghwzzlkBqnkDIetgCBpsDyH/20jYvI0UaLM6zH+cKw==
 
 "@spectrum-css/tokens@^1.0.7":
   version "1.0.7"
