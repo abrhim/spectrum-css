@@ -1,5 +1,5 @@
 /*
-Copyright 2019 Adobe. All rights reserved.
+Copyright 2022 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,361 +10,589 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-@import "font.css";
+/* @import "font.css"; */
 
-/**
- Support for Typography
+/* Heading */
 
- V4 is added last to prevent fallbacks to v3.
-**/
-
-/**
- * Spectrum CSS Typography V3 (numeric) & V4 (t-shirt)
- *
- * Adds typography sizing and margins to be processed by
- * mixins that are auto-generated in tools/component-builder/css/processor.js
- *
- */
-
-/* t-shirt size-based typography */
-
-/* Headings t-shirt sizes */
-
-/* Discrete rules for Heading: regular, heavy, light */
-@mixin typographyTShirtSizes .spectrum-Heading--sizeXXXL {
-}
-@mixin typographyTShirtSizes .spectrum-Heading--sizeXXL {
-}
-@mixin typographyTShirtSizes .spectrum-Heading--sizeXL {
-}
-@mixin typographyTShirtSizes .spectrum-Heading--sizeL {
-}
-@mixin typographyTShirtSizes .spectrum-Heading--sizeM {
-}
-@mixin typographyTShirtSizes .spectrum-Heading--sizeS {
-}
-@mixin typographyTShirtSizes .spectrum-Heading--sizeXS {
-}
-@mixin typographyTShirtSizes .spectrum-Heading--sizeXXS {
-}
-
-/* Standard SUIT rules for Heading: regular, serif, heavy, light */
+/* Heading tokens */
 .spectrum-Heading {
-  font-family: var(--spectrum-heading-m-text-font-family);
-  font-weight: var(--spectrum-heading-m-text-font-weight);
+  /* Static tokens */
+  --spectrum-heading-font-weight-heavy: 900;
 
-  em,
-  .spectrum-Heading-emphasized {
-    font-style: var(--spectrum-heading-m-emphasized-text-font-style);
-  }
+  /* Font family */
+
+  /* Default is san-serif */
+  --spectrum-heading-sans-serif: var(--spectrum-font-family-default);
+  --spectrum-heading-serif: var(--spectrum-font-family-serif);
+
+  --spectrum-heading-heading-strong: var(--spectrum-heading-strong);
+  --spectrum-heading-heading-strong-emphasized: var(--spectrum-heading-heading-strong-emphasized);
+
+  /* Light */
+  --spectrum-heading-heading-light-strong: var(--spectrum-heading-light-strong);
+  --spectrum-heading-heading-light-strong-emphasized: var(--spectrum-heading-light-strong-emphasized);
+
+  --spectrum-heading-serif-light: var(--spectrum-serif-heading-light);
+  --spectrum-heading-serif-light-emphasized: var(--spectrum-serif-heading-light-emphasized);
+
+  --spectrum-heading-sans-serif-light: var(--spectrum-sans-serif-heading-light);
+  --spectrum-heading-sans-serif-light-emphasized: var(--spectrum-sans-serif-heading-light-emphasized);
+
+  /* Heavy */
+  --spectrum-heading-heading-heavy: var(--spectrum-heading-heavy);
+  --spectrum-heading-heading-heavy-strong: var(--spectrum-heading-heavy-strong);
+  --spectrum-heading-heading-heavy-strong-emphasized: var(--spectrum-heading-heavy-strong-emphasized);
+
+  --spectrum-heading-cjk: var(--spectrum-cjk-heading);
+  --spectrum-heading-cjk-strong: var(--spectrum-heading-strong);
+  --spectrum-heading-cjk-emphasized: var(--spectrum-cjk-heading-emphasized);
+  --spectrum-heading-cjk-strong-emphasized: var(--spectrum-cjk-heading-strong-emphasized);
+
+  --spectrum-heading-cjk-light: var(--spectrum-cjk-heading-light);
+  --spectrum-heading-cjk-light-strong: var(--spectrum-cjk-heading-light-strong);
+  --spectrum-heading-cjk-light-emphasized: var(--spectrum-cjk-heading-light-emphasized);
+  --spectrum-heading-cjk-light-strong-emphasized: var(--spectrum-cjk-heading-light-strong-emphasized);
+
+  --spectrum-heading-cjk-heavy: var(--spectrum-cjk-heading-heavy);
+  --spectrum-heading-cjk-heavy-strong: var(--spectrum-cjk-heading-heavy-strong);
+  --spectrum-heading-cjk-heavy-emphasized: var(--spectrum-cjk-heading-heavy-emphasized);
+  --spectrum-heading-cjk-heavy-strong-emphasized: var(--spectrum-cjk-heading-heavy-strong-emphasized);
+
+  --spectrum-heading-font-color: var(--spectrum-gray-900);
+
+  --spectrum-heading-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+  --spectrum-heading-heading-line-height: var(--spectrum-heading-line-height);
+  --spectrum-heading-cjk-line-height: var(--spectrum-cjk-heading-line-height);
+
+  --spectrum-heading-margin-start: var(--spectrum-heading-margin-top-multiplier);
+  --spectrum-heading-margin-end: var(--spectrum-heading-margin-bottom-multiplier);
+}
+
+/* Heading t-shirt sizes */
+.spectrum-Heading--sizeXXXL {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xxxl);
+}
+.spectrum-Heading--sizeXXL {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xxl);
+}
+.spectrum-Heading--sizeXL {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xl);
+}
+.spectrum-Heading--sizeL {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-l);
+}
+.spectrum-Heading--sizeM {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-m);
+}
+.spectrum-Heading--sizeS {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-s);
+}
+.spectrum-Heading--sizeXS {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xs);
+}
+.spectrum-Heading--sizeXXS {
+  --spectrum-heading-font-size: var(--spectrum-heading-size-xxs);
+}
+
+/* Base Heading is sans serif */
+.spectrum-Heading {
+  /* TODO: how are the font-family-default and heading tokens supposed to be used? */
+  font-family: var(--spectrum-heading-sans-serif);
+
+  font-size: var(--spectrum-heading-font-size);
+
+  color: var(--spectrum-heading-font-color);
+
+  margin-block-start: var(--spectrum-heading-margin-start);
+  margin-block-end: var(--spectrum-heading-margin-end);
+
+  line-height: var(--spectrum-heading-heading-line-height);
+
 
   strong,
   .spectrum-Heading-strong {
-    font-weight: var(--spectrum-heading-m-strong-text-font-weight);
+    font-family: var(--spectrum-heading-heading-strong);
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized {
+    font-family: var(--spectrum-heading-heading-strong-emphasized);
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    line-height: var(--spectrum-heading-cjk-line-height);
+    letter-spacing: var(--spectrum-heading-cjk-letter-spacing);
+
+    font-family: var(--spectrum-heading-cjk);
+
+    em,
+    .spectrum-Heading-emphasized {
+      font-family: var(--spectrum-heading-cjk-emphasized);
+    }
+
+    strong,
+    .spectrum-Heading-strong {
+      font-family: var(--spectrum-heading-cjk-strong);
+    }
+
+    .spectrum-Heading-strong.spectrum-Heading-emphasized {
+      font-family: var(--spectrum-heading-cjk-strong-emphasized);
+    }
   }
 }
 
-.spectrum-Heading--serif {
-  font-family: var(--spectrum-body-m-serif-text-font-family);
+.spectrum-Heading--serif,
+.spectrum-Heading--serif.spectrum-Heading--heavy,
+.spectrum-Heading--serif.spectrum-Heading--light {
+  font-family: var(--spectrum-heading-serif);
+
+  strong,
+  .spectrum-Heading-strong {
+    font-family: var(--spectrum-heading-serif);
+  }
 }
 
+/* Heavy */
 .spectrum-Heading--heavy {
-  font-weight: var(--spectrum-heading-m-heavy-text-font-weight);
+  font-family: var(--spectrum-heading-heading-heavy);
+
+  strong,
+  .spectrum-Heading-strong {
+    font-family: var(--spectrum-heading-heading-heavy-strong);
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized {
+    font-family: var(--spectrum-heading-heading-heavy-strong-emphasized);
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--spectrum-heading-cjk-heavy);
+  }
 
   em,
   .spectrum-Heading-emphasized {
-    font-style: var(--spectrum-heading-m-heavy-emphasized-text-font-style);
+    font-family: var(--spectrum-heading-cjk-heavy-emphasized);
   }
 
   strong,
   .spectrum-Heading-strong {
-    font-weight: var(--spectrum-heading-m-heavy-strong-text-font-weight);
+    font-family: var(--spectrum-heading-cjk-heavy-strong);
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized {
+    font-family: var(--spectrum-heading-cjk-heavy-strong-emphasized);
   }
 }
 
+/* Heavy Serif */
+.spectrum-Heading--heavy.spectrum-Heading--serif {
+  font-weight: var(--spectrum-heading-font-weight-heavy);
+
+  strong,
+  .spectrum-Heading-strong {
+    font-weight: var(--spectrum-heading-font-weight-heavy);
+  }
+}
+
+/* Light */
 .spectrum-Heading--light {
-  font-weight: var(--spectrum-heading-m-light-emphasized-text-font-weight);
+  font-family: var(--spectrum-heading-sans-serif-light);
 
   em,
   .spectrum-Heading-emphasized {
-    font-style: var(--spectrum-heading-m-light-emphasized-text-font-style);
+    /* TODO Is this sans serif token value correct? */
+    font-family: var(--spectrum-heading-sans-serif-light-emphasized);
   }
 
   strong,
   .spectrum-Heading-strong {
-    font-weight: var(--spectrum-heading-m-light-strong-text-font-weight);
+    font-family: var(--spectrum-heading-heading-light-strong);
   }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized {
+    font-family: var(--spectrum-heading-heading-light-strong-emphasized);
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--spectrum-heading-cjk-light);
+  }
+
+  em,
+  .spectrum-Heading-emphasized {
+    font-family: var(--spectrum-heading-cjk-light-emphasized);
+  }
+
+  strong,
+  .spectrum-Heading-strong {
+    font-family: var(--spectrum-heading-cjk-light-strong);
+  }
+
+  .spectrum-Heading-strong.spectrum-Heading-emphasized {
+    font-family: var(--spectrum-heading-cjk-light-strong-emphasized);
+  }
+}
+
+/* Light Serif */
+.spectrum-Heading--light.spectrum-Heading--serif {
+  font-family: var(--spectrum-heading-serif-light);
+
+  em,
+  .spectrum-Heading-emphasized {
+    font-family: var(--spectrum-heading-serif-light-emphasized);
+  }
+}
+
+
+/* Body */
+
+/* Body tokens */
+.spectrum-Body {
+  /* Font family */
+  --spectrum-body-sans-serif: var(--spectrum-font-family-default);
+  --spectrum-body-serif: var(--spectrum-font-family-serif);
+
+  --spectrum-body-body-strong: var(--spectrum-body-strong);
+  --spectrum-body-body-emphasized: var(--spectrum-body-emphasized);
+  --spectrum-body-body-strong-emphasized: var(--spectrum-body-strong-emphasized);
+
+  --spectrum-body-cjk: var(--spectrum-cjk-body);
+  --spectrum-body-cjk-strong: var(--spectrum-cjk-body-strong);
+  --spectrum-body-cjk-emphasized: var(--spectrum-cjk-body-emphasized);
+  --spectrum-body-cjk-strong-emphasized: var(--spectrum-cjk-body-strong-emphasized);
+
+  --spectrum-body-body-line-height: var(--spectrum-body-line-height);
+  --spectrum-body-cjk-line-height: var(--spectrum-cjk-body-line-height);
+
+  --spectrum-body-cjk-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+  --spectrum-body-margin: var(--spectrum-body-margin-multiplier);
+
+  /* Font color */
+  --spectrum-body-font-color: var(--spectrum-gray-800);
 }
 
 /* Body t-shirt sizes */
-@mixin typographyTShirtSizes .spectrum-Body--sizeXXXL {
+.spectrum-Body--sizeXXXL {
+  --spectrum-body-font-size: var(--spectrum-body-size-xxxl);
 }
-@mixin typographyTShirtSizes .spectrum-Body--sizeXXL {
+.spectrum-Body--sizeXXL {
+  --spectrum-body-font-size: var(--spectrum-body-size-xxl);
 }
-@mixin typographyTShirtSizes .spectrum-Body--sizeXL {
+.spectrum-Body--sizeXL {
+  --spectrum-body-font-size: var(--spectrum-body-size-xl);
 }
-@mixin typographyTShirtSizes .spectrum-Body--sizeL {
+.spectrum-Body--sizeL {
+  --spectrum-body-font-size: var(--spectrum-body-size-l);
 }
-@mixin typographyTShirtSizes .spectrum-Body--sizeM {
+.spectrum-Body--sizeM {
+  --spectrum-body-font-size: var(--spectrum-body-size-m);
 }
-@mixin typographyTShirtSizes .spectrum-Body--sizeS {
+.spectrum-Body--sizeS {
+  --spectrum-body-font-size: var(--spectrum-body-size-s);
 }
-@mixin typographyTShirtSizes .spectrum-Body--sizeXS {
+.spectrum-Body--sizeXS {
+  --spectrum-body-font-size: var(--spectrum-body-size-xs);
+}
+
+&,
+.spectrum-Body {
+  color: var(--spectrum-body-font-color);
 }
 
 .spectrum-Body {
-  font-family: var(--spectrum-body-m-text-font-family);
+  font-family: var(--spectrum-body-sans-serif);
+  font-size: var(--spectrum-body-font-size);
+
+  line-height: var(--spectrum-body-body-line-height);
+
+  margin-block: var(--spectrum-body-margin);
 
   strong,
   .spectrum-Body-strong {
-    font-weight: var(--spectrum-body-m-strong-text-font-weight);
+    font-family: var(--spectrum-body-body-strong);
   }
 
   em,
   .spectrum-Body-emphasized {
-    font-style: var(--spectrum-body-m-emphasized-text-font-style);
+    font-family: var(--spectrum-body-body-emphasized);
+  }
+
+  .spectrum-Body-strong.spectrum-Body-emphasized {
+    font-family: var(--spectrum-body-body-strong-emphasized);
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--spectrum-body-cjk);
+
+    line-height: var(--spectrum-body-cjk-line-height);
+
+    letter-spacing: var(--spectrum-body-cjk-letter-spacing);
+
+    strong,
+    .spectrum-Body-strong {
+      font-family: var(--spectrum-body-cjk-strong);
+    }
+
+    em,
+    .spectrum-Body-emphasized {
+      font-family: var(--spectrum-body-cjk-emphasized);
+    }
+
+    .spectrum-Body-strong.spectrum-Body-emphasized {
+      font-family: var(--spectrum-body-cjk-strong-emphasized);
+    }
   }
 }
 
 .spectrum-Body--serif {
-  font-family: var(--spectrum-body-m-serif-text-font-family);
+  font-family: var(--spectrum-body-serif);
 }
 
-/* Detail / former subheadings t-shirt sizes */
-/* Standard SUIT rules for Detail: regular, serif, light */
+/* Detail */
+
+/* Detail tokens */
 .spectrum-Detail {
-  font-family: var(--spectrum-heading-m-text-font-family);
+  --spectrum-detail-sans-serif: var(--spectrum-font-family-default);
+  --spectrum-detail-serif: var(--spectrum-font-family-serif);
+
+  --spectrum-detail-detail-strong: var(--spectrum-detail-strong);
+  --spectrum-detail-detail-emphasized: var(--spectrum-detail-emphasized);
+  --spectrum-detail-detail-strong-emphasized: var(--spectrum-detail-strong-emphasized);
+
+  --spectrum-detail-detail-light: var(--spectrum-detail-light);
+  --spectrum-detail-detail-light-strong: var(--spectrum-detail-light-strong);
+  --spectrum-detail-detail-light-emphasized: var(--spectrum-detail-light-emphasized);
+  --spectrum-detail-detail-light-strong-emphasized: var(--spectrum-detail-light-strong-emphasized);
+
+  --spectrum-detail-cjk: var(--spectrum-cjk-detail);
+  --spectrum-detail-cjk-emphasized: var(--spectrum-cjk-detail-emphasized);
+  --spectrum-detail-cjk-strong: var(--spectrum-cjk-detail-strong);
+  --spectrum-detail-cjk-strong-emphasized: var(--spectrum-cjk-detail-strong-emphasized);
+
+  --spectrum-detail-cjk-light: var(--spectrum-cjk-detail-light);
+  --spectrum-detail-cjk-light-strong: var(--spectrum-cjk-detail-light-strong);
+  --spectrum-detail-cjk-light-emphasized: var(--spectrum-cjk-detail-light-emphasized);
+  --spectrum-detail-cjk-light-strong-emphasized: var(--spectrum-cjk-detail-light-strong-emphasized);
+
+  --spectrum-detail-detail-line-height: var(--spectrum-detail-line-height);
+  --spectrum-detail-cjk-line-height: var(--spectrum-cjk-detail-line-height);
+
+  --spectrum-detail-detail-letter-spacing: var(--spectrum-detail-letter-spacing);
+
+  --spectrum-detail-margin-start: var(--spectrum-detail-margin-top-mulitplier);
+  --spectrum-detail-margin-end: var(--spectrum-detail-margin-bottom-multiplier);
+
+  --spectrum-detail-font-color: var(--spectrum-gray-900);
+}
+
+/* Detail t-shirt sizes */
+.spectrum-Detail--sizeXL {
+  --spectrum-detail-font-size: var(--spectrum-detail-size-xl);
+}
+.spectrum-Detail--sizeL {
+  --spectrum-detail-font-size: var(--spectrum-detail-size-l);
+}
+.spectrum-Detail--sizeM {
+  --spectrum-detail-font-size: var(--spectrum-detail-size-m);
+}
+.spectrum-Detail--sizeS {
+  --spectrum-detail-font-size: var(--spectrum-detail-size-s);
+}
+
+.spectrum-Detail {
+  font-family: var(--spectrum-detail-sans-serif);
+  font-size: var(--spectrum-detail-font-size);
+
+  line-height: var(--spectrum-detail-detail-line-height);
+
+  letter-spacing: var(--spectrum-detail-detail-letter-spacing);
+
+  color: var(--spectrum-detail-font-color);
 
   strong,
   .spectrum-Detail-strong {
-    font-weight: var(--spectrum-detail-m-strong-text-font-weight);
+    font-family: var(--spectrum-detail-detail-strong);
   }
 
   em,
   .spectrum-Detail-emphasized {
-    font-style: var(--spectrum-detail-m-emphasized-text-font-style);
+    font-family: var(--spectrum-detail-detail-emphasized);
+  }
+
+ .spectrum-Detail-strong.spectrum-Detail-emphasized {
+    font-family: var(--spectrum-detail-detail-strong-emphasized);
+  }
+
+  &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--spectrum-detail-cjk);
+
+    line-height: var(--spectrum-detail-cjk-line-height);
+
+    strong,
+    .spectrum-Detail-strong {
+      font-family: var(--spectrum-detail-cjk-strong);
+    }
+
+    em,
+    .spectrum-Detail-emphasized {
+      font-family: var(--spectrum-detail-cjk-emphasized);
+    }
+
+    .spectrum-Detail-strong.spectrum-Detail-emphasized {
+      font-family: var(--spectrum-detail-cjk-strong-emphasized);
+    }
   }
 }
 
+/* Detail - Light  */
 .spectrum-Detail--light {
-  font-style: var(--spectrum-detail-m-light-text-font-style);
-  font-weight: var(--spectrum-detail-m-light-text-font-weight);
+  font-family: var(--spectrum-detail-detail-light);
+
+  margin-block-start: var(--spectrum-detail-margin-start);
+  margin-block-end: var(--spectrum-detail-margin-end);
+
+  strong,
+  .spectrum-Detail-strong {
+    font-family: var(--spectrum-detail-detail-light-strong);
+  }
+
+  em,
+  .spectrum-Detail-emphasized {
+    font-family: var(--spectrum-detail-detail-light-emphasized);
+  }
+
+  .spectrum-Body-strong.spectrum-Body-emphasized {
+    font-family: var(--spectrum-detail-detail-light-strong-emphasized);
+  }
+
+ &:lang(zh),
+  &:lang(ja),
+  &:lang(ko) {
+    font-family: var(--spectrum-detail-cjk-light);
+
+    strong,
+    .spectrum-Detail-strong {
+      font-family: var(--spectrum-detail-cjk-light-strong);
+    }
+
+    em,
+    .spectrum-Detail-emphasized {
+      font-family: var(--spectrum-detail-cjk-light-emphasized);
+    }
+
+    .spectrum-Detail-strong.spectrum-Detail-emphasized {
+      font-family: var(--spectrum-detail-cjk-light-strong-emphasized);
+    }
+  }
 }
 
 .spectrum-Detail--serif {
-  font-family: var(--spectrum-body-m-serif-text-font-family);
+  font-family: var(--spectrum-detail-serif);
 }
 
-/* Discrete rules for Detail: regular, light */
-@mixin typographyTShirtSizes .spectrum-Detail--sizeXL {
-}
-@mixin typographyTShirtSizes .spectrum-Detail--sizeL {
-}
-@mixin typographyTShirtSizes .spectrum-Detail--sizeM {
-}
-@mixin typographyTShirtSizes .spectrum-Detail--sizeS {
+/* Code */
+
+/* Code tokens */
+.spectrum-Code {
+  /* Font family */
+  --spectrum-code-font-family: var(--spectrum-font-family-code);
+
+  /* --spectrum-code-code: var(--spectrum-code); */
+  --spectrum-code-code-strong: var(--spectrum-code-strong);
+  --spectrum-code-code-emphasized: var(--spectrum-code-emphasized);
+  --spectrum-code-code-strong-emphasized: var(--spectrum-code-strong-emphasized);
+
+  --spectrum-code-cjk: var(--spectrum-cjk-code);
+  --spectrum-code-cjk-strong: var(--spectrum-cjk-code-strong);
+  --spectrum-code-cjk-emphasized: var(--spectrum-cjk-code-emphasized);
+  --spectrum-code-cjk-strong-emphasized: var(--spectrum-cjk-code-strong-emphasized);
+
+  --spectrum-code-code-line-height: var(--spectrum-code-line-height);
+  --spectrum-code-cjk-line-height: var(--spectrum-cjk-code-line-height);
+
+  --spectrum-code-letter-spacing: var(--spectrum-cjk-letter-spacing);
+
+  --spectrum-code-font-color: var(--spectrum-gray-800);
 }
 
-/* @TODO does not exists for strong or heavy for Details. Will be added in the future */
-/*
-@mixin typographyTShirtSizes .spectrum-Detail-sizeXL--strong, detail-strong-XL { background-color: orange;}
-@mixin typographyTShirtSizes .spectrum-Detail-sizeL--strong, detail-strong-L {}
-@mixin typographyTShirtSizes .spectrum-Detail-sizeM--strong, detail-strong-M {}
-@mixin typographyTShirtSizes .spectrum-Detail-sizeS--heavy, detail-heavy-S {} */
+.spectrum-Code--sizeXS {
+  --spectrum-code-font-size: var(--spectrum-code-size-xs);
+}
+
+.spectrum-Code--sizeS {
+  --spectrum-code-font-size: var(--spectrum-code-size-s);
+}
+
+.spectrum-Code--sizeM {
+  --spectrum-code-font-size: var(--spectrum-code-size-m);
+}
+
+.spectrum-Code--sizeL {
+  --spectrum-code-font-size: var(--spectrum-code-size-l);
+}
+
+.spectrum-Code--sizeXL {
+  --spectrum-code-font-size: var(--spectrum-code-size-xl);
+}
+
 
 /* Code t-shirt sizes */
+.spectrum-Code--sizeXL {
+}
+
 .spectrum-Code {
-  font-family: var(--spectrum-heading-m-text-font-family);
+  font-familly: var(--spectrum-code-font-family);
+  font-size: var(--spectrum-code-font-size);
+
+  line-height: var(--spectrum-code-code-line-height);
+
+  color: var(--spectrum-code-font-color);
 
   strong,
   .spectrum-Code-strong {
-    font-weight: var(--spectrum-code-m-strong-text-font-weight);
+    font-family: var(--spectrum-code-code-strong);
   }
 
   em,
   .spectrum-Code-emphasized {
-    font-style: var(--spectrum-code-m-emphasized-text-font-style);
-  }
-}
-
-.spectrum-Code--serif {
-  font-family: var(--spectrum-body-m-serif-text-font-family);
-}
-
-@mixin typographyTShirtSizes .spectrum-Code--sizeXL, code-XL, true {
-  font-family: var(--spectrum-code-xl-text-font-family);
-}
-@mixin typographyTShirtSizes .spectrum-Code--sizeL, code-L, true {
-  font-family: var(--spectrum-code-l-text-font-family);
-}
-@mixin typographyTShirtSizes .spectrum-Code--sizeM, code-M, true {
-  font-family: var(--spectrum-code-m-text-font-family);
-}
-@mixin typographyTShirtSizes .spectrum-Code--sizeS, code-S, true {
-  font-family: var(--spectrum-code-s-text-font-family);
-}
-@mixin typographyTShirtSizes .spectrum-Code--sizeXS, code-XS, true {
-  font-family: var(--spectrum-code-xs-text-font-family);
-}
-
-/* Margins for headings and body */
-.spectrum-Typography {
-  @mixin typographyTShirtMargins .spectrum-Heading--sizeXXXL {
-  }
-  @mixin typographyTShirtMargins .spectrum-Heading--sizeXXL {
-  }
-  @mixin typographyTShirtMargins .spectrum-Heading--sizeXL {
-  }
-  @mixin typographyTShirtMargins .spectrum-Heading--sizeL {
-  }
-  @mixin typographyTShirtMargins .spectrum-Heading--sizeM {
-  }
-  @mixin typographyTShirtMargins .spectrum-Heading--sizeS {
-  }
-  @mixin typographyTShirtMargins .spectrum-Heading--sizeXS {
-  }
-  @mixin typographyTShirtMargins .spectrum-Heading--sizeXXS {
+    font-family: var(--spectrum-code-code-emphasized);
   }
 
-  @mixin typographyTShirtMargins .spectrum-Body--sizeXXXL {
+ .spectrum-Code-strong.spectrum-Code-emphasized {
+    font-family: var(--spectrum-code-code-strong-emphasized);
   }
-  @mixin typographyTShirtMargins .spectrum-Body--sizeXXL {
-  }
-  @mixin typographyTShirtMargins .spectrum-Body--sizeXL {
-  }
-  @mixin typographyTShirtMargins .spectrum-Body--sizeL {
-  }
-  @mixin typographyTShirtMargins .spectrum-Body--sizeM {
-  }
-  @mixin typographyTShirtMargins .spectrum-Body--sizeS {
-  }
-  @mixin typographyTShirtMargins .spectrum-Body--sizeXS {
-  }
-}
 
-/* International support */
-.spectrum {
+
+  &:lang(zh),
   &:lang(ja),
-  &:lang(ko),
-  &:lang(zh) {
-    @mixin typographyTShirtSizes .spectrum-Heading--sizeXXXL, heading-han-XXXL {
-    }
-    @mixin typographyTShirtSizes .spectrum-Heading--sizeXXL, heading-han-XXL {
-    }
-    @mixin typographyTShirtSizes .spectrum-Heading--sizeXL, heading-han-XL {
-    }
-    @mixin typographyTShirtSizes .spectrum-Heading--sizeL, heading-han-L {
-    }
-    @mixin typographyTShirtSizes .spectrum-Heading--sizeM, heading-han-M {
-    }
-    @mixin typographyTShirtSizes .spectrum-Heading--sizeS, heading-han-S {
-    }
-    @mixin typographyTShirtSizes .spectrum-Heading--sizeXS, heading-han-XS {
-    }
-    @mixin typographyTShirtSizes .spectrum-Heading--sizeXXS, heading-han-XXS {
+  &:lang(ko) {
+    font-family: var(--spectrum-code-cjk);
+
+    line-height: var(--spectrum-code-cjk-line-height);
+    letter-spacing: var(--spectrum-code-letter-spacing);
+
+    strong,
+    .spectrum-Code-strong {
+      font-family: var(--spectrum-code-cjk-strong);
     }
 
-    .spectrum-Heading--heavy {
-      font-weight: var(--spectrum-heading-han-m-text-font-weight);
-
-      em,
-      .spectrum-Heading--emphasized {
-        font-style: var(
-          --spectrum-heading-han-heavy-m-emphasized-text-font-style
-        );
-        font-weight: var(
-          --spectrum-heading-han-heavy-m-emphasized-text-font-weight
-        );
-      }
-
-      strong,
-      .spectrum-Heading--strong {
-        font-style: var(--spectrum-heading-m-heavy-strong-text-font-style);
-        font-weight: var(--spectrum-heading-m-heavy-strong-text-font-weight);
-      }
+    em,
+    .spectrum-Code-emphasized {
+      font-family: var(--spectrum-code-cjk-emphasized);
     }
 
-    .spectrum-Heading--light {
-      font-weight: var(--spectrum-heading-han-m-text-font-weight);
-
-      em,
-      .spectrum-Heading--emphasized {
-        font-style: var(
-          --spectrum-heading-han-m-light-emphasized-text-font-style
-        );
-        font-weight: var(
-          --spectrum-heading-han-m-light-emphasized-text-font-weight
-        );
-      }
-
-      strong,
-      .spectrum-Heading--strong {
-        font-style: var(--spectrum-heading-han-m-light-strong-text-font-style);
-        font-weight: var(
-          --spectrum-heading-han-m-light-strong-text-font-weight
-        );
-      }
-    }
-
-    @mixin typographyTShirtSizes .spectrum-Body--sizeXXXL, body-han-XXXL {
-    }
-    @mixin typographyTShirtSizes .spectrum-Body--sizeXXL, body-han-XXL {
-    }
-    @mixin typographyTShirtSizes .spectrum-Body--sizeXL, body-han-XL {
-    }
-    @mixin typographyTShirtSizes .spectrum-Body--sizeL, body-han-L {
-    }
-    @mixin typographyTShirtSizes .spectrum-Body--sizeM, body-han-M {
-    }
-    @mixin typographyTShirtSizes .spectrum-Body--sizeS, body-han-S {
-    }
-    @mixin typographyTShirtSizes .spectrum-Body--sizeXS, body-han-XS {
-    }
-
-    @mixin typographyTShirtSizes .spectrum-Detail--sizeXL, detail-han-xl {
-    }
-    @mixin typographyTShirtSizes .spectrum-Detail--sizeL, detail-han-l {
-    }
-    @mixin typographyTShirtSizes .spectrum-Detail--sizeM, detail-han-m {
-    }
-    @mixin typographyTShirtSizes .spectrum-Detail--sizeS, detail-han-s {
-    }
-
-    .spectrum-Detail--light {
-      font-weight: var(--spectrum-detail-han-m-text-font-weight);
-
-      em,
-      .spectrum-Detail--emphasized {
-        font-style: var(--spectrum-detail-han-m-light-emphasized-text-font-style);
-        font-weight: var(
-          --spectrum-detail-han-m-light-emphasized-text-font-weight
-        );
-      }
-
-      strong,
-      .spectrum-Detail--strong {
-        font-style: var(--spectrum-detail-han-m-light-strong-text-font-style);
-        font-weight: var(--spectrum-detail-han-m-light-strong-text-font-weight);
-      }
-    }
-
-    @mixin typographyTShirtSizes .spectrum-Code--sizeXL, code-han-XL, true {
-      font-family: var(--spectrum-code-han-xl-text-font-family);
-    }
-
-    @mixin typographyTShirtSizes .spectrum-Code--sizeL, code-han-L, true {
-      font-family: var(--spectrum-code-han-l-text-font-family);
-    }
-
-    @mixin typographyTShirtSizes .spectrum-Code--sizeM, code-han-M, true {
-      font-family: var(--spectrum-code-han-m-text-font-family);
-    }
-
-    @mixin typographyTShirtSizes .spectrum-Code--sizeS, code-han-S, true {
-      font-family: var(--spectrum-code-han-s-text-font-family);
-    }
-    @mixin typographyTShirtSizes .spectrum-Code--sizeXS, code-han-XS, true {
-      font-family: var(--spectrum-code-han-xs-text-font-family);
+    .spectrum-Code-strong.spectrum-Code-emphasized {
+      font-family: var(--spectrum-code-cjk-strong-emphasized);
     }
   }
 }
