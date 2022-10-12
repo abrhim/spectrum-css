@@ -3,6 +3,78 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.9"></a>
+## 2.0.9
+🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.8...@spectrum-css/helptext@2.0.9)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
+<a name="2.0.8"></a>
+## 2.0.8
+🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.7...@spectrum-css/helptext@2.0.8)
+
+### 🐛 Bug fixes
+
+* **helptext:** resolve error due to core tokens breaking change ([640e24f](https://github.com/adobe/spectrum-css/commit/640e24f))
+
+
+
+
+
+<a name="2.0.7"></a>
+## 2.0.7
+🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.6...@spectrum-css/helptext@2.0.7)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
+<a name="2.0.6"></a>
+## 2.0.6
+🗓 2022-09-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.5...@spectrum-css/helptext@2.0.6)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2022-08-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.4...@spectrum-css/helptext@2.0.5)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2022-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.3...@spectrum-css/helptext@2.0.4)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2022-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.2...@spectrum-css/helptext@2.0.3)
+
+**Note:** Version bump only for package @spectrum-css/helptext
+
+
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2
 🗓 2022-08-02 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/helptext@2.0.1...@spectrum-css/helptext@2.0.2)

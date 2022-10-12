@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.7"></a>
+## 2.0.7
+🗓 2022-09-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.6...@spectrum-css/closebutton@2.0.7)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+
+
+
+
+<a name="2.0.6"></a>
+## 2.0.6
+🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.5...@spectrum-css/closebutton@2.0.6)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+
+
+
+
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2022-09-13 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.4...@spectrum-css/closebutton@2.0.5)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+
+
+
+
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2022-09-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.3...@spectrum-css/closebutton@2.0.4)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+
+
+
+
+<a name="2.0.3"></a>
+## 2.0.3
+🗓 2022-08-26 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.2...@spectrum-css/closebutton@2.0.3)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+
+
+
+
+<a name="2.0.2"></a>
+## 2.0.2
+🗓 2022-08-17 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.1...@spectrum-css/closebutton@2.0.2)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+
+
+
+
+<a name="2.0.1"></a>
+## 2.0.1
+🗓 2022-08-16 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@2.0.0...@spectrum-css/closebutton@2.0.1)
+
+**Note:** Version bump only for package @spectrum-css/closebutton
+
+
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0
 🗓 2022-08-03 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/closebutton@1.2.13...@spectrum-css/closebutton@2.0.0)
