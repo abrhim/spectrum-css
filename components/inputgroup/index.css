@@ -13,8 +13,6 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup {
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
-  --spectrum-combobox-field-border-width-right: 0;
-  --spectrum-combobox-quiet-fieldbutton-padding-right: 0;
 
   --spectrum-inputgroup-generic-padding: var(--spectrum-global-dimension-size-150);
 
@@ -69,16 +67,6 @@ governing permissions and limitations under the License.
   /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
   --spectrum-datepicker-range-dash-line-height: calc(
     var(--spectrum-textfield-m-texticon-height) - var(--spectrum-global-dimension-size-100)
-  );
-
-  /* be square: we're a little ahead of DNA at the time of writing, but Nate said so */
-  --spectrum-combobox-button-width: calc(
-    var(--spectrum-global-dimension-size-400)
-  );
-
-  --spectrum-combobox-quiet-button-offset: calc(
-    var(--spectrum-actionbutton-m-texticon-min-width) / 2 -
-      var(--spectrum-alias-ui-icon-chevron-size-100) / 2
   );
 
   /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
