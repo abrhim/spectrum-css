@@ -11,6 +11,10 @@ governing permissions and limitations under the License.
 */
 
 .spectrum-InputGroup {
+  --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+}
+
+.spectrum-InputGroup {
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
 
@@ -148,7 +152,7 @@ governing permissions and limitations under the License.
       box-shadow: none;
       border-radius: 0;
       border-bottom: 2px solid var(--spectrum-textfield-m-textonly-focus-ring-border-color-key-focus);
-      bottom: calc(-1 * var(--spectrum-alias-input-quiet-focusline-gap));
+      bottom: calc(-1 * var(--spectrum-combobox-focus-indicatorgap));
     }
   }
 
