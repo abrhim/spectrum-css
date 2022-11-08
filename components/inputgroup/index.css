@@ -12,26 +12,26 @@ governing permissions and limitations under the License.
 
 .spectrum-InputGroup {
   /* Placeholders */
-  --spectrum-global-dimension-size-100: 10px;
-  --spectrum-global-dimension-size-400: 40px;
+  /* --spectrum-global-dimension-size-100: 10px; */
+  /* --spectrum-global-dimension-size-400: 40px; */
   
   --spectrum-combobox-min-inline-size: var(--spectrum-combo-box-minimum-width-multiplier);
-  --spectrum-combobox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
-  --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
-  --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color);
+  /* --spectrum-combobox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness); */
+  /* --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap); */
+  /* --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color); */
 
   --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
 }
 
 .spectrum-InputGroup--quiet {
-  /* --spectrum-combobox-min-inline-size: var(--spectrum-combo-quiet-box-minimum-width-multiplier); */
+  --spectrum-combobox-min-inline-size: var(--spectrum-combo-box-quiet-minimum-width-multiplier);
 }
 
 .spectrum-InputGroup {
   /* Todo: move to DNA */
   --spectrum-combobox-quiet-fieldbutton-border-radius: 0;
 
-  --spectrum-inputgroup-generic-padding: var(--spectrum-global-dimension-size-150);
+  /* --spectrum-inputgroup-generic-padding: var(--spectrum-global-dimension-size-150); */
 
   /* --spectrum-datepicker-range-input-width-first: calc(
     var(--spectrum-global-dimension-size-1600) - 2 * var(--spectrum-inputgroup-generic-padding)
@@ -88,13 +88,13 @@ governing permissions and limitations under the License.
   ); */
 
   /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
-  --spectrum-textfield-icon-inline-end-override: calc(var(--spectrum-alias-infieldbutton-full-height-m) + var(--spectrum-global-dimension-size-100));
+  /* --spectrum-textfield-icon-inline-end-override: calc(var(--spectrum-alias-infieldbutton-full-height-m) + var(--spectrum-global-dimension-size-100)); */
 }
 
 /* hack: use var so it doesn't disappear */
-.🤫 {
+/* .🤫 {
   width: var(--spectrum-textfield-icon-inline-end-override);
-}
+} */
 
 .spectrum-InputGroup {
   position: relative;
@@ -113,7 +113,7 @@ governing permissions and limitations under the License.
 
 .spectrum-InputGroup-input {
   /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
-  padding-right: var(--spectrum-alias-infieldbutton-full-height-m);
+  /* padding-right: var(--spectrum-alias-infieldbutton-full-height-m); */
 
   /* fill space */
   flex: 1;
@@ -123,7 +123,7 @@ governing permissions and limitations under the License.
   border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius);
 
   /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
-  --spectrum-textfield-icon-inline-end-override: var(--spectrum-alias-infieldbutton-full-height-m);
+  /* --spectrum-textfield-icon-inline-end-override: var(--spectrum-alias-infieldbutton-full-height-m); */
 
   .spectrum-InputGroup-button {
     inline-size: auto;
