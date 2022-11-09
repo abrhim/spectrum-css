@@ -18,4 +18,19 @@ governing permissions and limitations under the License.
   --spectrum-edge-to-visual-only-100: 7px;
   --spectrum-edge-to-visual-only-200: 10px;
   --spectrum-edge-to-visual-only-300: 13px;
+
+  --spectrum-menu-item-selectable-edge-to-text-not-selected-small: 28px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected-medium: 32px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected-large: 38px;
+  --spectrum-menu-item-selectable-edge-to-text-not-selected-extra-large: 45px;
+
+  --spectrum-menu-item-checkmark-height-small: 10px;
+  --spectrum-menu-item-checkmark-height-medium: 10px;
+  --spectrum-menu-item-checkmark-height-large: 12px;
+  --spectrum-menu-item-checkmark-height-extra-large: 14px;
+  
+  --spectrum-menu-item-checkmark-width-small: 10px;
+  --spectrum-menu-item-checkmark-width-medium: 10px;
+  --spectrum-menu-item-checkmark-width-large: 12px;
+  --spectrum-menu-item-checkmark-width-extra-large: 14px;
 }
