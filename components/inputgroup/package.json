@@ -27,6 +27,7 @@
     "@spectrum-css/pickerbutton": "^2.0.0",
     "@spectrum-css/popover": "^5.0.18",
     "@spectrum-css/textfield": "^3.2.4",
+    "@spectrum-css/progresscircle": "^2.0.1",
     "@spectrum-css/tokens": "^4.0.0",
     "gulp": "^4.0.0"
   },

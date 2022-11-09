@@ -45,6 +45,63 @@ examples:
         </button>
       </div>
 
+      <h4>Default - Loading</h4>
+      <div class="spectrum-InputGroup">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <div
+            class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small"
+          >
+            <div class="spectrum-ProgressCircle-track"></div>
+            <div class="spectrum-ProgressCircle-fills">
+              <div class="spectrum-ProgressCircle-fillMask1">
+                <div class="spectrum-ProgressCircle-fillSubMask1">
+                  <div class="spectrum-ProgressCircle-fill"></div>
+                </div>
+              </div>
+              <div class="spectrum-ProgressCircle-fillMask2">
+                <div class="spectrum-ProgressCircle-fillSubMask2">
+                  <div class="spectrum-ProgressCircle-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <input
+            type="text"
+            placeholder="Type here"
+            name="field"
+            value=""
+            class="spectrum-Textfield-input spectrum-InputGroup-input"
+          />
+        </div>
+
+        <button
+          tabindex="-1"
+          class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right spectrum-InputGroup-button"
+          aria-haspopup="listbox"
+        >
+          <div class="spectrum-PickerButton-fill">
+            <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron200" />
+            </svg>
+          </div>
+        </button>
+      </div>
+
+      <h4>Default with Field Label</h4>
+      <div class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Country</div>
+      <div class="spectrum-InputGroup">
+        <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input type="text" placeholder="Type here" name="field" value="" class="spectrum-Textfield-input spectrum-InputGroup-input">
+        </div>
+        <button tabindex="-1" class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right spectrum-InputGroup-button" aria-haspopup="listbox">
+          <div class="spectrum-PickerButton-fill">
+            <svg class="spectrum-PickerButton-UIIcon spectrum-Icon spectrum-UIIcon-ChevronDown200" focusable="false" aria-hidden="true">
+              <use xlink:href="#spectrum-css-icon-Chevron200" />
+            </svg>
+          </div>
+        </button>
+      </div>
+
       <h4>Open</h4>
       <div class="spectrum-InputGroup is-open">
         <div class="spectrum-Textfield spectrum-InputGroup-textfield">
