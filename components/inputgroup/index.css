@@ -39,6 +39,8 @@ governing permissions and limitations under the License.
   /* --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color); */
 
   --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
+
+  --spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component);
 }
 
 .spectrum-InputGroup--quiet {
@@ -122,6 +124,8 @@ governing permissions and limitations under the License.
   min-inline-size: var(--spectrum-combobox-min-inline-size);
   block-size: var(--spectrum-combobox-block-size);
   border-radius: var(--spectrum-combobox-border-radius);
+
+  margin-block-start: var(--spectrum-combobox-spacing-label-to-combobox);
 }
 
 .spectrum-InputGroup-button {
