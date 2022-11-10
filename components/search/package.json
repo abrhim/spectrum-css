@@ -1,0 +1,36 @@
+{
+  "name": "@spectrum-css/search",
+  "version": "4.2.13",
+  "description": "The Spectrum CSS search component",
+  "license": "Apache-2.0",
+  "main": "dist/index-vars.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adobe/spectrum-css.git",
+    "directory": "components/search"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/spectrum-css/issues"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "peerDependencies": {
+    "@spectrum-css/clearbutton": "^1.2.10",
+    "@spectrum-css/icon": "^3.0.21",
+    "@spectrum-css/textfield": "^3.2.2",
+    "@spectrum-css/vars": "^8.0.0"
+  },
+  "devDependencies": {
+    "@spectrum-css/clearbutton": "^1.2.12",
+    "@spectrum-css/component-builder": "^3.2.0",
+    "@spectrum-css/icon": "^3.0.23",
+    "@spectrum-css/textfield": "^3.2.5",
+    "@spectrum-css/vars": "^8.0.0",
+    "gulp": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://opensource.adobe.com/spectrum-css/"
+}

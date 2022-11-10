@@ -1,0 +1,13 @@
+.spectrum {
+  --system-spectrum-inlinealert-border-and-icon-color-info: var(--spectrum-blue-800);
+  --system-spectrum-inlinealert-border-and-icon-color-positive: var(--spectrum-green-800);
+  --system-spectrum-inlinealert-border-and-icon-color-notice: var(--spectrum-orange-600);
+  --system-spectrum-inlinealert-border-and-icon-color-negative: var(--spectrum-red-800)
+}
+
+.spectrum--express {
+  --system-spectrum-inlinealert-border-and-icon-color-info: var(--spectrum-blue-1000);
+  --system-spectrum-inlinealert-border-and-icon-color-positive: var(--spectrum-green-1000);
+  --system-spectrum-inlinealert-border-and-icon-color-notice: var(--spectrum-orange-800);
+  --system-spectrum-inlinealert-border-and-icon-color-negative: var(--spectrum-red-1000)
+}

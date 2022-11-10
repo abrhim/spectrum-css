@@ -1,0 +1,45 @@
+
+.spectrum-AssetCard {
+  --spectrum-alias-assetcard-overlay-background-color: rgba(27,127,245,0.1);
+  --spectrum-alias-assetcard-border-color-selected: var(--spectrum-global-color-blue-500);
+  --spectrum-alias-assetcard-border-color-selected-hover: var(--spectrum-global-color-blue-500);
+  --spectrum-alias-assetcard-border-color-selected-down: var(--spectrum-global-color-blue-600);
+  --spectrum-alias-assetcard-selectionindicator-background-color-ordered: var(--spectrum-global-color-blue-500);
+  --spectrum-alias-border-radius-regular: var(--spectrum-global-dimension-size-50);
+  --spectrum-alias-border-color-hover: var(--spectrum-global-color-gray-500);
+  --spectrum-alias-focus-ring-border-radius-regular: undefined;
+  --spectrum-alias-background-color-quickactions: undefined;
+  --spectrum-alias-border-size-thick: var(--spectrum-global-dimension-static-size-25);
+  --spectrum-alias-focus-color: var(--spectrum-global-color-blue-400);
+  --spectrum-alias-border-size-thin: var(--spectrum-global-dimension-static-size-10);
+  --spectrum-heading-xs-text-font-family: var(--spectrum-alias-body-text-font-family);
+  --spectrum-heading-xs-text-font-weight: var(--spectrum-alias-heading-text-font-weight-regular);
+  --spectrum-heading-xs-text-size: var(--spectrum-alias-heading-xs-text-size);
+  --spectrum-heading-xs-text-line-height: var(--spectrum-alias-heading-text-line-height);
+  --spectrum-heading-xs-text-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-heading-xs-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-heading-xxs-text-font-family: var(--spectrum-alias-body-text-font-family);
+  --spectrum-heading-xxs-text-font-weight: var(--spectrum-alias-heading-text-font-weight-regular);
+  --spectrum-heading-xxs-text-size: var(--spectrum-alias-heading-xxs-text-size);
+  --spectrum-heading-xxs-text-line-height: var(--spectrum-alias-heading-text-line-height);
+  --spectrum-heading-xxs-text-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-heading-xxs-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-body-m-text-font-family: var(--spectrum-alias-body-text-font-family);
+  --spectrum-body-m-text-size: var(--spectrum-global-dimension-font-size-200);
+  --spectrum-body-m-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-body-m-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-body-m-text-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-body-m-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-body-s-text-font-family: var(--spectrum-alias-body-text-font-family);
+  --spectrum-body-s-text-size: var(--spectrum-global-dimension-font-size-100);
+  --spectrum-body-s-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-body-s-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-body-s-text-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-body-s-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+  --spectrum-body-xs-text-font-family: var(--spectrum-alias-body-text-font-family);
+  --spectrum-body-xs-text-size: var(--spectrum-global-dimension-font-size-75);
+  --spectrum-body-xs-text-font-weight: var(--spectrum-alias-body-text-font-weight);
+  --spectrum-body-xs-text-line-height: var(--spectrum-alias-body-text-line-height);
+  --spectrum-body-xs-text-font-style: var(--spectrum-global-font-style-regular);
+  --spectrum-body-xs-text-letter-spacing: var(--spectrum-global-font-letter-spacing-none);
+}

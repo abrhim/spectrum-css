@@ -1,0 +1,7 @@
+.spectrum {
+  --system-spectrum-popover-border-width: var(--spectrum-border-width-100)
+}
+
+.spectrum--express {
+  --system-spectrum-popover-border-width: 0
+}

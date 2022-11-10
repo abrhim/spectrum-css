@@ -1,0 +1,62 @@
+.spectrum-ColorLoupe {
+  --spectrum-colorloupe-width-adjusted: calc(var(--spectrum-colorloupe-width, var(--spectrum-alias-colorloupe-width)) + var(--spectrum-global-dimension-static-size-100, 8px));
+  --spectrum-colorloupe-height-adjusted: calc(var(--spectrum-colorloupe-height, var(--spectrum-alias-colorloupe-height)) + var(--spectrum-global-dimension-static-size-100, 8px));
+  --spectrum-colorloupe-offset: var(--spectrum-global-dimension-static-size-200, 16px);
+  --spectrum-colorloupe-animation-distance: var(--spectrum-global-dimension-static-size-100, 8px);
+}
+
+.spectrum-ColorLoupe {
+  width: var(--spectrum-colorloupe-width-adjusted);
+  height: var(--spectrum-colorloupe-height-adjusted);
+
+  position: absolute;
+  transform: translate(0, var(--spectrum-colorloupe-animation-distance));
+  opacity: 0;
+  transform-origin: bottom center;
+  bottom: calc(50% + var(--spectrum-colorloupe-offset));
+  left: calc(50% - var(--spectrum-colorloupe-width-adjusted) / 2);
+  transition: transform 100ms ease-in-out, opacity 125ms ease-in-out;
+
+  pointer-events: none;
+}
+
+.spectrum-ColorLoupe.is-open {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+.spectrum-ColorLoupe-outer {
+  stroke-width: var(--spectrum-colorloupe-outer-border-size, 0);
+}
+
+.spectrum-ColorLoupe-express {
+  display: var(--spectrum-colorloupe-express-visibility, none);
+}
+
+.spectrum-ColorLoupe-spectrum {
+  display: var(--spectrum-colorloupe-spectrum-visibility, block);
+}
+
+.🤫 {
+  --spectrum-picked-color: 0;
+  --spectrum-colorloupe-outer-stroke-width: 0;
+  --spectrum-colorloupe-outer-stroke-color: 0;
+}
+
+.spectrum-ColorLoupe-outer {
+  fill: var(--spectrum-colorloupe-inner-border-color, var(--spectrum-global-color-static-white));
+  stroke: var(--spectrum-colorloupe-outer-border-color, transparent);
+}
+
+.spectrum-ColorLoupe-inner {
+  fill: var(--spectrum-picked-color);
+
+  stroke: var(--spectrum-colorloupe-outer-stroke-color, var(--spectrum-global-color-static-transparent-black-200));
+  stroke-width: var(--spectrum-colorloupe-outer-stroke-width, var(--spectrum-alias-border-size-thick));
+}
+
+@media (forced-colors: active) {
+  .spectrum-ColorLoupe {
+    --spectrum-colorloupe-outer-border-color: CanvasText;
+  }
+}

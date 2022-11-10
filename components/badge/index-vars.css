@@ -1,0 +1,223 @@
+.spectrum-Badge {
+  --spectrum-badge-corner-radius: var(--spectrum-corner-radius-100);
+  --spectrum-badge-line-height: var(--spectrum-line-height-100);
+  --spectrum-badge-cjk-line-height: var(--spectrum-cjk-line-height-100);
+  --spectrum-badge-label-icon-color-white: var(--spectrum-white);
+  --spectrum-badge-label-icon-color-black: var(--spectrum-black);
+  --spectrum-badge-background-color-default: var(--spectrum-neutral-subdued-background-color-default);
+  --spectrum-badge-background-color-accent: var(--spectrum-accent-background-color-default);
+  --spectrum-badge-background-color-informative: var(--spectrum-informative-background-color-default);
+  --spectrum-badge-background-color-negative: var(--spectrum-negative-background-color-default);
+  --spectrum-badge-background-color-positive: var(--spectrum-positive-background-color-default);
+  --spectrum-badge-height: var(--spectrum-component-height-100);
+  --spectrum-badge-font-size: var(--spectrum-font-size-100);
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-100);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-100);
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-100);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-100);
+}
+
+.spectrum-Badge--sizeS {
+  --spectrum-badge-height: var(--spectrum-component-height-75);
+  --spectrum-badge-font-size: var(--spectrum-font-size-75);
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-75);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-75);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-75);
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-75);
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-75);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-75);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-75);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-75);
+}
+
+.spectrum-Badge--sizeM {
+  --spectrum-badge-height: var(--spectrum-component-height-100);
+  --spectrum-badge-font-size: var(--spectrum-font-size-100);
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-100);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-100);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-100);
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-100);
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-100);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-100);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-100);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-100);
+}
+
+.spectrum-Badge--sizeL {
+  --spectrum-badge-height: var(--spectrum-component-height-100);
+  --spectrum-badge-font-size: var(--spectrum-font-size-200);
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-200);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-200);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-200);
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-200);
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-200);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-200);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-200);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-200);
+}
+
+.spectrum-Badge--sizeXL {
+  --spectrum-badge-height: var(--spectrum-component-height-100);
+  --spectrum-badge-font-size: var(--spectrum-font-size-300);
+  --spectrum-badge-label-spacing-vertical-top: var(--spectrum-component-top-to-text-300);
+  --spectrum-badge-label-spacing-vertical-bottom: var(--spectrum-component-bottom-to-text-300);
+  --spectrum-badge-label-spacing-horizontal: var(--spectrum-component-edge-to-text-300);
+  --spectrum-badge-workflow-icon-size: var(--spectrum-workflow-icon-size-300);
+  --spectrum-badge-icon-text-spacing: var(--spectrum-text-to-visual-300);
+  --spectrum-badge-icon-spacing-horizontal: var(--spectrum-component-edge-to-visual-300);
+  --spectrum-badge-icon-spacing-vertical-top: var(--spectrum-component-top-to-workflow-icon-300);
+  --spectrum-badge-icon-only-spacing-horizontal: var(--spectrum-component-edge-to-visual-only-300);
+}
+
+@media (forced-colors: active) {
+  .spectrum-Badge {
+    border-color: CanvasText;
+  }
+}
+
+.spectrum-Badge {
+  min-block-size: var(--mod-badge-height,
+                      var(--spectrum-badge-height));
+  inline-size: auto;
+
+  display: inline-flex;
+  vertical-align: middle;
+  position: relative;
+
+  cursor: default;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-smoothing: subpixel-antialiased;
+
+  border-radius: var(--mod-badge-corner-radius,
+                    var(--spectrum-badge-corner-radius));
+  border: 1px solid transparent;
+
+  background: var(--mod-badge-background-color-default,
+                  var(--spectrum-badge-background-color-default));
+  color: var(--mod-badge-label-icon-color-white,
+            var(--spectrum-badge-label-icon-color-white));
+}
+
+.spectrum-Badge--black-text {
+    color: var(--mod-badge-label-icon-color-black,
+              var(--spectrum-badge-label-icon-color-black));
+  }
+
+.spectrum-Badge--neutral {
+    background: var(--mod-badge-background-color-default,
+                    var(--spectrum-badge-background-color-default));
+  }
+
+.spectrum-Badge--accent {
+    background: var(--mod-badge-background-color-accent,
+                    var(--spectrum-badge-background-color-accent));
+  }
+
+.spectrum-Badge--informative {
+    background: var(--mod-badge-background-color-informative,
+                    var(--spectrum-badge-background-color-informative));
+  }
+
+.spectrum-Badge--negative {
+    background: var(--mod-badge-background-color-negative,
+                    var(--spectrum-badge-background-color-negative));
+  }
+
+.spectrum-Badge--positive {
+    background: var(--mod-badge-background-color-positive,
+                    var(--spectrum-badge-background-color-positive));
+  }
+
+.spectrum-Badge--fixed-inline-start {
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+  }
+
+.spectrum-Badge--fixed-inline-end {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+  }
+
+.spectrum-Badge--fixed-block-start {
+    border-start-start-radius: 0;
+    border-start-end-radius: 0;
+  }
+
+.spectrum-Badge--fixed-block-end {
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+  }
+
+.spectrum-Badge-label {
+  font-size: var(--mod-badge-font-size,
+                      var(--spectrum-badge-font-size));
+  line-height: var(--mod-badge-line-height,
+                      var(--spectrum-badge-line-height));
+
+  padding-inline-end: var(--mod-badge-label-spacing-horizontal,
+                      var(--spectrum-badge-label-spacing-horizontal));
+  padding-inline-start: var(--mod-badge-label-spacing-horizontal,
+                      var(--spectrum-badge-label-spacing-horizontal));
+  padding-block-start: var(--mod-badge-label-spacing-vertical-top,
+                      var(--spectrum-badge-label-spacing-vertical-top));
+  padding-block-end: var(--mod-badge-label-spacing-vertical-bottom,
+                      var(--spectrum-badge-label-spacing-vertical-bottom));
+
+  color: var(--mod-badge-label-icon-color-white,
+                      var(--spectrum-badge-label-icon-color-white));
+}
+
+.spectrum-Badge--black-text .spectrum-Badge-label {
+    color: var(--mod-badge-label-icon-color-black,
+                      var(--spectrum-badge-label-icon-color-black));
+  }
+
+.spectrum-Badge-label:lang(ja),
+  .spectrum-Badge-label:lang(zh),
+  .spectrum-Badge-label:lang(ko) {
+    line-height: var(--mod-badge-cjk-line-height,
+                      var(--spectrum-badge-cjk-line-height));
+  }
+
+.spectrum-Badge-icon + .spectrum-Badge-label {
+    padding-inline-start: 0;
+  }
+
+.spectrum-Badge-icon {
+  block-size: var(--mod-badge-workflow-icon-size,
+                      var(--spectrum-badge-workflow-icon-size));
+  inline-size: var(--mod-badge-workflow-icon-size,
+                      var(--spectrum-badge-workflow-icon-size));
+  flex: 0 0 var(--mod-badge-workflow-icon-size,
+                      var(--spectrum-badge-workflow-icon-size));
+
+  padding-inline-start: var(--mod-badge-icon-spacing-horizontal,
+                      var(--spectrum-badge-icon-spacing-horizontal));
+  padding-inline-end: var(--mod-badge-icon-text-spacing,
+                      var(--spectrum-badge-icon-text-spacing));
+  padding-block-start: var(--mod-badge-icon-spacing-vertical-top,
+                      var(--spectrum-badge-icon-spacing-vertical-top));
+  padding-block-end: var(--mod-badge-icon-spacing-vertical-top,
+                      var(--spectrum-badge-icon-spacing-vertical-top));
+
+  color: var(--mod-badge-label-icon-color-white,
+                      var(--spectrum-badge-label-icon-color-white));
+}
+
+.spectrum-Badge-icon--no-label {
+    padding-inline-start: var(--mod-badge-icon-only-spacing-horizontal,
+                      var(--spectrum-badge-icon-only-spacing-horizontal));
+    padding-inline-end: var(--mod-badge-icon-only-spacing-horizontal,
+                      var(--spectrum-badge-icon-only-spacing-horizontal));
+  }
+
+.spectrum-Badge--black-text .spectrum-Badge-icon {
+    color: var(--mod-badge-label-icon-color-black,
+                      var(--spectrum-badge-label-icon-color-black));
+  }

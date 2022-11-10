@@ -1,0 +1,8 @@
+
+.spectrum-IllustratedMessage {
+  --spectrum-illustratedmessage-heading-color: var(--spectrum-global-color-gray-800);
+  --spectrum-illustratedmessage-heading-font-size: var(--spectrum-alias-heading-m-text-size);
+  --spectrum-illustratedmessage-heading-font-weight: var(--spectrum-alias-heading-text-font-weight-regular);
+  --spectrum-illustratedmessage-description-color: var(--spectrum-global-color-gray-700);
+  --spectrum-illustratedmessage-description-font-style: var(--spectrum-global-font-style-regular);
+}

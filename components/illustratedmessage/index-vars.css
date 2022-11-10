@@ -1,0 +1,52 @@
+.spectrum-IllustratedMessage {
+  --spectrum-illustratedmessage-description-max-width: 500px;
+  --spectrum-illustratedmessage-heading-max-width: 500px;
+  --spectrum-illustratedmessage-illustration-margin-bottom: 24px;
+  --spectrum-illustratedmessage-heading-margin: 0;
+  --spectrum-illustratedmessage-description-margin: 4px 0 0 0;
+}
+
+.spectrum-IllustratedMessage {
+  height: 100%;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+
+  text-align: center;
+}
+
+.spectrum-IllustratedMessage-illustration {
+  margin-bottom: var(--spectrum-illustratedmessage-illustration-margin-bottom);
+}
+
+.spectrum-IllustratedMessage-heading {
+  color: var(--spectrum-illustratedmessage-heading-color, var(--spectrum-global-color-gray-800));
+  font-size: var(--spectrum-illustratedmessage-heading-font-size, var(--spectrum-alias-heading-m-text-size));
+  font-weight: var(--spectrum-illustratedmessage-heading-font-weight, var(--spectrum-alias-heading-text-font-weight-regular));
+  max-width: var(--spectrum-illustratedmessage-heading-max-width);
+  margin: var(--spectrum-illustratedmessage-heading-margin);
+}
+
+.spectrum-IllustratedMessage-description {
+  color: var(--spectrum-illustratedmessage-description-color, var(--spectrum-global-color-gray-700));
+  font-style: var(--spectrum-illustratedmessage-description-font-style, var(--spectrum-global-font-style-regular));
+  max-width: var(--spectrum-illustratedmessage-description-max-width);
+  margin: var(--spectrum-illustratedmessage-description-margin);
+}
+
+.spectrum-IllustratedMessage--cta .spectrum-IllustratedMessage-description {
+    font-style: var(--spectrum-illustratedmessage-description-font-style, var(--spectrum-global-font-style-regular));
+  }
+
+.spectrum-IllustratedMessage-illustration {
+  color: var(--spectrum-global-color-gray-500);
+  fill: currentColor;
+  stroke: currentColor;
+}

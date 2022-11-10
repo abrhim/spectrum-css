@@ -1,0 +1,12 @@
+
+.spectrum-ColorLoupe {
+  --spectrum-colorloupe-width: var(--spectrum-alias-colorloupe-width);
+  --spectrum-colorloupe-height: var(--spectrum-alias-colorloupe-height);
+  --spectrum-colorloupe-outer-border-size: 0;
+  --spectrum-colorloupe-express-visibility: none;
+  --spectrum-colorloupe-spectrum-visibility: block;
+  --spectrum-colorloupe-inner-border-color: var(--spectrum-global-color-static-white);
+  --spectrum-colorloupe-outer-border-color: transparent;
+  --spectrum-colorloupe-outer-stroke-color: var(--spectrum-global-color-static-transparent-black-200);
+  --spectrum-colorloupe-outer-stroke-width: var(--spectrum-alias-border-size-thick);
+}
