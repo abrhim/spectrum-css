@@ -60,6 +60,7 @@ governing permissions and limitations under the License.
   /* --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color); */
 
   --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
+  --spectrum-combobox-border-width: var(--spectrum-border-width-100);
 
   --spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component);
 }
@@ -150,6 +151,7 @@ governing permissions and limitations under the License.
   margin-block-start: var(--spectrum-combobox-spacing-label-to-combobox);
 
   border-radius: var(--spectrum-combobox-border-radius);
+  border-width: var(--spectrum-combobox-border-width);
 }
 
 .spectrum-InputGroup-textfield-icon {
@@ -172,6 +174,11 @@ governing permissions and limitations under the License.
 
   /* fill space */
   flex: 1;
+
+  /* TODO inspect this */
+  &::placeholder {
+    font-size: var(--spectrum-font-size-100);
+  }
 }
 
 .spectrum-InputGroup--quiet {
