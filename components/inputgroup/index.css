@@ -12,28 +12,49 @@ governing permissions and limitations under the License.
 
 .spectrum-InputGroup--sizeS {
   --spectrum-combobox-block-size: var(--spectrum-component-height-75);
+  /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-75); */
+
+  --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-small);
+  --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-small);
 }
 
 .spectrum-InputGroup--sizeM {
   --spectrum-combobox-block-size: var(--spectrum-component-height-100);
+  /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-100); */
+
+  --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-medium);
+  --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-medium);
 }
 
 .spectrum-InputGroup--sizeL {
   --spectrum-combobox-block-size: var(--spectrum-component-height-200);
+  /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-200); */
+
+  --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-large);
+  --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-large);
 }
 
 .spectrum-InputGroup--sizeXL {
   --spectrum-combobox-block-size: var(--spectrum-component-height-300);
-}
+  /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-300); */
 
+  --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-extra-large);
+  --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-extra-large);
+}
 
 .spectrum-InputGroup {
   /* Placeholders */
   /* --spectrum-global-dimension-size-100: 10px; */
   /* --spectrum-global-dimension-size-400: 40px; */
+
+  --spectrum-combobox-button-size: 32px;
   
   --spectrum-combobox-min-inline-size: var(--spectrum-combo-box-minimum-width-multiplier);
   --spectrum-combobox-block-size: var(--spectrum-component-height-100);
+  /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-100); */
+
+  --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-medium);
+  --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-medium);
   /* --spectrum-combobox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness); */
   /* --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap); */
   /* --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color); */
@@ -118,15 +139,26 @@ governing permissions and limitations under the License.
 
 .spectrum-InputGroup {
   position: relative;
+
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
+
   min-inline-size: var(--spectrum-combobox-min-inline-size);
   block-size: var(--spectrum-combobox-block-size);
-  border-radius: var(--spectrum-combobox-border-radius);
 
   margin-block-start: var(--spectrum-combobox-spacing-label-to-combobox);
+
+  border-radius: var(--spectrum-combobox-border-radius);
 }
+
+.spectrum-InputGroup-textfield-icon {
+  position: absolute;
+  inset-inline-end: calc(var(--spectrum-combobox-inline-spacing-icon-to-button) + var(--spectrum-combobox-button-size));
+  inset-block-start: var(--spectrum-combobox-block-spacing-edge-to-icon);
+  inset-block-end: var(--spectrum-combobox-block-spacing-edge-to-icon);
+}
+
 
 .spectrum-InputGroup-button {
   /* Be above textfield so box shadow shines through */

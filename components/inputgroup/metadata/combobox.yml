@@ -47,9 +47,20 @@ examples:
 
       <h4>Default - Loading</h4>
       <div class="spectrum-InputGroup">
+        
+        <!-- Text Field -->
         <div class="spectrum-Textfield spectrum-InputGroup-textfield">
+          <input
+            type="text"
+            placeholder="Type here"
+            name="field"
+            value=""
+            class="spectrum-Textfield-input spectrum-InputGroup-input"
+          />
+
+          <!-- Progress Circle -->
           <div
-            class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small"
+            class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-InputGroup-textfield-icon"
           >
             <div class="spectrum-ProgressCircle-track"></div>
             <div class="spectrum-ProgressCircle-fills">
@@ -65,15 +76,8 @@ examples:
               </div>
             </div>
           </div>
-          <input
-            type="text"
-            placeholder="Type here"
-            name="field"
-            value=""
-            class="spectrum-Textfield-input spectrum-InputGroup-input"
-          />
         </div>
-
+        
         <button
           tabindex="-1"
           class="spectrum-PickerButton spectrum-PickerButton--sizeM spectrum-PickerButton--uiicononly spectrum-PickerButton--right spectrum-InputGroup-button"
