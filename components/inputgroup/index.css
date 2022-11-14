@@ -13,6 +13,7 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup--sizeS {
   --spectrum-combobox-block-size: var(--spectrum-component-height-75);
   /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-75); */
+  --spectrum-combobox-font-size: var(--spectrum-font-size-75);
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-small);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-small);
@@ -21,6 +22,7 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup--sizeM {
   --spectrum-combobox-block-size: var(--spectrum-component-height-100);
   /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-100); */
+  --spectrum-combobox-font-size: var(--spectrum-font-size-100);
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-medium);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-medium);
@@ -29,6 +31,7 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup--sizeL {
   --spectrum-combobox-block-size: var(--spectrum-component-height-200);
   /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-200); */
+  --spectrum-combobox-font-size: var(--spectrum-font-size-200);
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-large);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-large);
@@ -37,6 +40,7 @@ governing permissions and limitations under the License.
 .spectrum-InputGroup--sizeXL {
   --spectrum-combobox-block-size: var(--spectrum-component-height-300);
   /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-300); */
+  --spectrum-combobox-font-size: var(--spectrum-font-size-300);
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-extra-large);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-extra-large);
@@ -52,6 +56,7 @@ governing permissions and limitations under the License.
   --spectrum-combobox-min-inline-size: var(--spectrum-combo-box-minimum-width-multiplier);
   --spectrum-combobox-block-size: var(--spectrum-component-height-100);
   /* --spectrum-combobox-icon-size: var(--spectrum-workflow-icon-size-100); */
+  --spectrum-combobox-font-size: var(--spectrum-font-size-100);
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-medium);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-medium);
@@ -63,10 +68,14 @@ governing permissions and limitations under the License.
   --spectrum-combobox-border-width: var(--spectrum-border-width-100);
 
   --spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component);
+
+  --spectrum-combobox-font-family: var(--spectrum-font-family-default);
 }
 
 .spectrum-InputGroup--quiet {
   --spectrum-combobox-min-inline-size: var(--spectrum-combo-box-quiet-minimum-width-multiplier);
+  /* TODO Check if this makes sense */
+  --spectrum-combobox-spacing-textfield-to-border: var(--spectrum-field-edge-to-border-quiet);
 }
 
 .spectrum-InputGroup {
@@ -177,7 +186,8 @@ governing permissions and limitations under the License.
 
   /* TODO inspect this */
   &::placeholder {
-    font-size: var(--spectrum-font-size-100);
+    font-size: var(--spectrum-combobox-font-size);
+    font-family: var(--spectrum-combobox-font-family);
   }
 }
 
@@ -193,5 +203,9 @@ governing permissions and limitations under the License.
     /* TODO */
     /* inset-inline-end: calc(-1 * var(--spectrum-alias-combobox-quiet-button-offset-x)); */
   }
-}
 
+
+ .spectrum-InputGroup-input {
+    padding-block-end: var(--spectrum-combobox-spacing-textfield-to-border);
+  }
+}
