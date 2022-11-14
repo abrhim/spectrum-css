@@ -10,6 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+const path = require('path');
+
 /**
  * Spectrum CSS PostCSS Processor
  *
@@ -182,7 +184,9 @@ function addNodesToCSS(mixin, css) {
  */
 function getProcessors(keepVars = false, notNested = true, secondNotNested = true, diff = false) {
   return [
-    require('postcss-import'),
+    require('postcss-import')({
+      root: path.resolve(__dirname, '../../../'),
+    }),
     require('postcss-mixins')({
       mixins: {
 

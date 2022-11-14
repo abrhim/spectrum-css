@@ -1,0 +1,31 @@
+<link rel="preconnect" href="https://use.typekit.net" />
+<link rel="dns-prefetch" href="https://use.typekit.net" />
+<!-- For Adobe Clean font support -->
+<link rel="stylesheet" href="https://use.typekit.net/bbk5msc.css" />
+
+<link rel="stylesheet" href="/static/base.css" />
+<link rel="stylesheet" href="@spectrum-css/popover/dist/index-vars.css" />
+<link rel="stylesheet" href="@spectrum-css/button/dist/index-vars.css" />
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('spectrum', 'spectrum--medium', 'spectrum--light');
+
+        // Attach button classes to existing markup
+        const buttons = document.querySelectorAll('.os-content button[type="button"]');
+        console.log(buttons);
+        buttons.map(button => {
+            button.classList.add('spectrum-Button', 'spectrum-Button--outline', 'spectrum-Button--sizeM');
+            button.children[0].classList.add('spectrum-Button-label');
+            button.onclick = () => {
+                console.log('clicked', this);
+                button.classList.add('is-selected');
+
+                const popover = document.querySelector('body > div:last-of-type:not(.monaco-aria-container)');
+                console.log(popover);
+                popover.classList.add('spectrum-Popover')
+                popover.classList.toggle('is-open');
+            };
+        });
+    });
+</script>

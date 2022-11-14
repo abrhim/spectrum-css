@@ -1,0 +1,69 @@
+{
+    "$id": "#HelpText",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Help text",
+    "description": "Help text provides either an informative description or an error message that gives more context about what a user needs to input. It’s commonly used in forms.",
+    "category": "inputs",
+    "type": "object",
+    "design-url": "https://spectrum.adobe.com/page/help-text/",
+    "tags": [
+        "inputs"
+    ],
+    "properties": {
+        "className": {
+            "type": "string",
+            "description": "Root class name for this element.",
+            "const": "spectrum-HelpText",
+            "readonly": true,
+            "hidden": true
+        },
+        "text": {
+            "title": "Help text content",
+            "type": "string",
+            "format": "textarea",
+            "examples": [
+                "Create a password with at least 8 characters."
+            ]
+        },
+        "variant": {
+            "title": "Help text variant",
+            "type": "string",
+            "format": "radio",
+            "enum": [
+                "neutral",
+                "negative"
+            ],
+            "default": "neutral"
+        },
+        "hideIcon": {
+            "title": "Hide icon",
+            "description": "Only applicable if variant is negative.",
+            "type": "boolean",
+            "default": false,
+            "category": "Advanced"
+        },
+        "size": {
+            "title": "Help text size",
+            "type": "string",
+            "enum": [
+                "s",
+                "m",
+                "l",
+                "xl"
+            ],
+            "default": "m"
+        },
+        "isDisabled": {
+            "title": "Disabled",
+            "type": "boolean",
+            "default": false,
+            "category": "Advanced"
+        }
+    },
+    "required": [
+        "hideIcon",
+        "size",
+        "isDisabled"
+    ],
+    "additionalProperties": false
+}

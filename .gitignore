@@ -17,3 +17,5 @@ npm-debug.log*
 .idea
 lerna-debug.log
 yarn-error.log
+tools/preview/storybook-static
+**/*.css.js

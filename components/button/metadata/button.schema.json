@@ -1,0 +1,116 @@
+{
+  "$id": "#Button",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Button",
+  "description": "Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a flow.",
+  "category": "actions",
+  "type": "object",
+  "design-url": "https://spectrum.adobe.com/page/button/",
+  "tags": [
+    "actions"
+  ],
+  "properties": {
+    "className": {
+      "type": "string",
+      "description": "Root class name for this element.",
+      "const": "spectrum-Button",
+      "readonly": true,
+      "hidden": true
+    },
+    "label": {
+      "title": "Label",
+      "type": "string",
+      "examples": [
+        "Edit"
+      ]
+    },
+    "hideLabel": {
+      "title": "Hide label",
+      "type": "boolean",
+      "default": false
+    },
+    "icon": {
+      "$ref": "#/global/properties/icon",
+      "description": "Icon must be present if the label is not defined."
+    },
+    "variant": {
+      "type": "string",
+      "enum": [
+        "accent",
+        "negative",
+        "primary",
+        "secondary"
+      ],
+      "default": "accent"
+    },
+    "size": {
+      "title": "Help text size",
+      "type": "string",
+      "enum": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "default": "m"
+    },
+    "staticColor": {
+      "title": "Static color",
+      "type": "string",
+      "enum": [
+        "white",
+        "black"
+      ],
+      "category": "Advanced"
+    },
+    "style": {
+      "title": "Button style",
+      "type": "string",
+      "enum": [
+        "fill",
+        "outline"
+      ],
+      "format": "radio",
+      "default": "fill"
+    },
+    "justified": {
+      "title": "Justified",
+      "type": "boolean",
+      "default": false,
+      "category": "Advanced"
+    },
+    "isPending": {
+      "title": "Pending",
+      "type": "boolean",
+      "default": false,
+      "category": "Advanced"
+    },
+    "isDisabled": {
+      "title": "Disabled",
+      "type": "boolean",
+      "default": false,
+      "category": "Advanced"
+    },
+    "actions": {
+      "title": "Actions",
+      "type": "array",
+      "items": {
+        "$ref": "#/global/properties/action"
+      },
+      "default": [
+        {
+          "type": "click",
+          "selector": ".spectrum-Button"
+        }
+      ],
+      "readonly": true
+    }
+  },
+  "required": [
+    "label",
+    "variant",
+    "style",
+    "size"
+  ],
+  "additionalProperties": false
+}
