@@ -60,7 +60,7 @@ examples:
 
           <!-- Progress Circle -->
           <div
-            class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-InputGroup-textfield-icon"
+            class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-InputGroup-loading-icon"
           >
             <div class="spectrum-ProgressCircle-track"></div>
             <div class="spectrum-ProgressCircle-fills">
