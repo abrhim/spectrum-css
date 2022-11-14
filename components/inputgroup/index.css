@@ -17,6 +17,7 @@ governing permissions and limitations under the License.
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-small);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-small);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-small);
 }
 
 .spectrum-InputGroup--sizeM {
@@ -26,6 +27,7 @@ governing permissions and limitations under the License.
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-medium);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-medium);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-medium);
 }
 
 .spectrum-InputGroup--sizeL {
@@ -35,6 +37,7 @@ governing permissions and limitations under the License.
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-large);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-large);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-large);
 }
 
 .spectrum-InputGroup--sizeXL {
@@ -44,6 +47,7 @@ governing permissions and limitations under the License.
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-extra-large);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-extra-large);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-extra-large);
 }
 
 .spectrum-InputGroup {
@@ -60,6 +64,7 @@ governing permissions and limitations under the License.
 
   --spectrum-combobox-inline-spacing-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-medium);
   --spectrum-combobox-block-spacing-edge-to-icon: var(--spectrum-field-top-to-alert-icon-medium);
+  --spectrum-combobox-spacing-edge-to-menu: var(--spectrum-component-to-menu-medium);
   /* --spectrum-combobox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness); */
   /* --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap); */
   /* --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color); */
@@ -161,6 +166,10 @@ governing permissions and limitations under the License.
 
   border-radius: var(--spectrum-combobox-border-radius);
   border-width: var(--spectrum-combobox-border-width);
+
+  & .is-open.spectrum-Popover {
+    transform: translateY(var(--spectrum-combobox-spacing-edge-to-menu));
+  }
 }
 
 .spectrum-InputGroup-textfield-icon {
