@@ -45,7 +45,7 @@ examples:
         </button>
       </div>
 
-      <h4>Default - Loading</h4>
+      <h4>Default - Progress Circle</h4>
       <div class="spectrum-InputGroup">
         
         <!-- Text Field -->
@@ -60,7 +60,7 @@ examples:
 
           <!-- Progress Circle -->
           <div
-            class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-InputGroup-loading-icon"
+            class="spectrum-ProgressCircle spectrum-ProgressCircle--indeterminate spectrum-ProgressCircle--small spectrum-InputGroup-progress-circle"
           >
             <div class="spectrum-ProgressCircle-track"></div>
             <div class="spectrum-ProgressCircle-fills">
