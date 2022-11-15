@@ -1,0 +1,8 @@
+@container (--system: spectrum) {
+  .spectrum-InputGroup {
+    --spectrum-combobox-border-color-default: var(--spectrum-gray-500);
+    --spectrum-combobox-border-color-hover: var(--spectrum-gray-600);
+    --spectrum-combobox-border-color-active: var(--spectrum-gray-600);
+    --spectrum-combobox-border-color-key-focus: var(--spectrum-gray-600);
+  }
+}

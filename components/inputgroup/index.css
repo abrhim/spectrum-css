@@ -91,9 +91,9 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-inline-start-edge-to-textfield: var(--spectrum-component-edge-to-text-100);
   --spectrum-combobox-spacing-inline-end-edge-to-button: var(--spectrum-component-edge-to-text-100);
 
-  /* --spectrum-combobox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness); */
-  /* --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap); */
-  /* --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color); */
+  --spectrum-combobox-focus-indicator-thickness: var(--spectrum-focus-indicator-thickness);
+  --spectrum-combobox-focus-indicator-gap: var(--spectrum-focus-indicator-gap);
+  --spectrum-combobox-focus-indicator-color: var(--spectrum-focus-indicator-color);
 
   --spectrum-combobox-border-radius: var(--spectrum-corner-radius-100);
   --spectrum-combobox-border-width: var(--spectrum-border-width-100);
@@ -101,6 +101,26 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-label-to-combobox: var(--spectrum-field-label-to-component);
 
   --spectrum-combobox-font-family: var(--spectrum-font-family-default);
+
+  --spectrum-combobox-font-color-default: var(--spectrum-neutral-content-color-default);
+  --spectrum-combobox-font-color-hover: var(--spectrum-neutral-content-color-hover);
+  --spectrum-combobox-font-color-active: var(--spectrum-neutral-content-color-down);
+  --spectrum-combobox-font-color-key-focus: var(--spectrum-neutral-content-color-key-focus);
+
+  --spectrum-combobox-background-color-default: var(--spectrum-gray-50);
+  --spectrum-combobox-background-color-hover: var(--spectrum-gray-50);
+  --spectrum-combobox-background-color-active: var(--spectrum-gray-50);
+  --spectrum-combobox-background-color-key-focus: var(--spectrum-gray-50);
+
+  --spectrum-combobox-background-color-disabled: var(--spectrum-disabled-background-color);
+  --spectrum-combobox-font-color-disabled: var(--spectrum-disabled-content-color);
+
+  --spectrum-combobox-border-color-invalid-default: var(--spectrum-negative-border-color-default);
+  --spectrum-combobox-border-color-invalid-hover: var(--spectrum-negative-border-color-hover);
+  --spectrum-combobox-border-color-invalid-active: var(--spectrum-negative-border-color-down);
+  --spectrum-combobox-border-color-invalid-key-focus: var(--spectrum-negative-border-color-key-focus);
+
+  --spectrum-combobox-alert-icon-color: var(--spectrum-negative-visual-color);
 }
 
 .spectrum-InputGroup--quiet {
@@ -109,6 +129,8 @@ governing permissions and limitations under the License.
   --spectrum-combobox-spacing-block-start-to-border: var(--spectrum-field-edge-to-border-quiet);
   --spectrum-combobox-spacing-inline-icon-to-button: var(--spectrum-combo-box-visual-to-field-button-quiet);
   --spectrum-combobox-spacing-inline-start-to-textfield: var(--spectrum-field-edge-to-text-quiet);
+
+  --spectrum-combobox-border-color-disabled: var(--spectrum-disabled-border-color);
 }
 
 .spectrum-InputGroup {
@@ -195,15 +217,76 @@ governing permissions and limitations under the License.
   border-radius: var(--spectrum-combobox-border-radius);
   border-width: var(--spectrum-combobox-border-width);
 
+  &:not(.is-open) {
+    &::after {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: calc((var(--spectrum-combobox-focus-indicator-gap) + var(--spectrum-combobox-border-width)) * -1);
+      inline-size: calc(100% + (var(--spectrum-combobox-focus-indicator-gap) * 2) + (var(--spectrum-combobox-border-width) * 2));
+      block-size: calc(100% + (var(--spectrum-combobox-focus-indicator-gap) * 2) + (var(--spectrum-combobox-border-width) * 2));
+      margin: auto;
+      margin-inline-start: calc((var(--spectrum-combobox-focus-indicator-gap) + var(--spectrum-combobox-focus-indicator-thickness) + var(--spectrum-combobox-border-width)) * -1);
+      border-style: solid;
+      border-width: var(--spectrum-combobox-focus-indicator-thickness);
+      border-color: transparent;
+      border-radius: calc(var(--spectrum-combobox-border-radius) + var(--spectrum-combobox-focus-indicator-gap) + var(--spectrum-combobox-border-width));
+    }
+
+    &:focus-ring,
+    &:focus-visible,
+    &:is-keyboardFocused,
+    &:is-focused {
+      /* Remove native outline */
+      outline: none;
+
+      /* Focus ring */
+      &::after {
+        border-color: var(--spectrum-combobox-focus-indicator-color);
+      }
+    }
+  }
+
   & .is-open.spectrum-Popover {
     transform: translateY(var(--spectrum-combobox-spacing-edge-to-menu));
   }
+}
 
+.spectrum-InputGroup.is-invalid {
   .spectrum-InputGroup-input {
-    padding-block-start: var(--spectrum-combobox-spacing-block-start-edge-to-textfield);
-    padding-block-end: var(--spectrum-combobox-spacing-block-end-edge-to-textfield);
-    padding-inline-start: var(--spectrum-combobox-spacing-inline-start-edge-to-textfield);
-    padding-inline-end: var(--spectrum-combobox-spacing-inline-end-edge-to-button);
+    border-color: var(--spectrum-combobox-border-color-invalid-default);
+
+    &:hover {
+      border-color: var(--spectrum-combobox-border-color-invalid-hover);
+    }
+
+    &:active {
+      border-color: var(--spectrum-combobox-border-color-invalid-active);
+    }
+
+    &:focus-visible,
+    &:focus-ring,
+    &.is-focused {
+      border-color: var(--spectrum-combobox-border-color-invalid-key-focus);
+    }
+  }
+
+  .spectrum-Textfield-validationIcon {
+    color: var(--spectrum-combobox-alert-icon-color);
+  }
+}
+
+.spectrum-InputGroup.is-disabled {
+  .spectrum-InputGroup-input {
+    background-color: var(--spectrum-combobox-background-color-disabled);
+
+    &::placeholder {
+      color: var(--spectrum-combobox-font-color-disabled);
+    }
   }
 }
 
@@ -212,9 +295,8 @@ governing permissions and limitations under the License.
   position: absolute;
   inset-inline-end: calc(var(--spectrum-combobox-spacing-inline-icon-to-button) + var(--spectrum-combobox-button-size));
   inset-block-start: var(--spectrum-combobox-block-spacing-edge-to-progress-circle);
-  inset-block-end: var(--spectrum-combobox-block-spacing-edge-to-progress-circle);
+  inset-block-end: var(--spectrum-combobox-block-spacing-edge-to-alert);
 }
-
 
 /* TODO: Having trouble styling this */
 .spectrum-Textfield-validationIcon {
@@ -237,6 +319,14 @@ governing permissions and limitations under the License.
   /* todo: when we add t-shirt sizing, this will be wrong ❤️ */
   /* padding-right: var(--spectrum-alias-infieldbutton-full-height-m); */
 
+  padding-block-start: var(--spectrum-combobox-spacing-block-start-edge-to-textfield);
+  padding-block-end: var(--spectrum-combobox-spacing-block-end-edge-to-textfield);
+  padding-inline-start: var(--spectrum-combobox-spacing-inline-start-edge-to-textfield);
+  padding-inline-end: var(--spectrum-combobox-spacing-inline-end-edge-to-button);
+
+  background-color: var(--spectrum-combobox-background-color-default);
+  border-color: var(--spectrum-combobox-border-color-default);
+
   /* fill space */
   flex: 1;
 
@@ -244,6 +334,37 @@ governing permissions and limitations under the License.
   &::placeholder {
     font-size: var(--spectrum-combobox-font-size);
     font-family: var(--spectrum-combobox-font-family);
+
+    color: var(--spectrum-combobox-font-color-default);
+  }
+
+  &:hover {
+    background-color: var(--spectrum-combobox-background-color-hover);
+    border-color: var(--spectrum-combobox-border-color-hover);
+
+    &::placeholder {
+      color: var(--spectrum-combobox-font-color-hover);
+    }
+  }
+
+  &:active {
+    background-color: var(--spectrum-combobox-background-color-active);
+    border-color: var(--spectrum-combobox-border-color-active);
+
+    &::placeholder {
+      color: var(--spectrum-combobox-font-color-active);
+    }
+  }
+
+  &:focus-visible,
+  &:focus-ring,
+  &.is-focused {
+    background-color: var(--spectrum-combobox-background-color-key-focus);
+    border-color: var(--spectrum-combobox-border-color-key-focus);
+
+    &::placeholder {
+      color: var(--spectrum-combobox-font-color-key-focus);
+    }
   }
 }
 
@@ -261,8 +382,155 @@ governing permissions and limitations under the License.
   }
 
 
- .spectrum-InputGroup-input {
+  .spectrum-InputGroup-input {
     padding-block-end: var(--spectrum-combobox-spacing-block-start-to-border);
     padding-inline-start: var(--spectrum-combobox-spacing-inline-start-to-textfield);
   }
+
+  .spectrum-InputGroup-input:disabled {
+    background-color: transparent;
+    border-bottom-color: var(--spectrum-combobox-border-color-disabled);
+  }
 }
+
+/* *************
+ * Date Picker *
+ ***************/
+
+/* .spectrum-Datepicker--range { */
+/*   border-radius: var(--spectrum-combobox-border-radius); */
+
+/*   /\* focus-ring *\/ */
+/*   &:after { */
+/*     pointer-events: none; */
+/*     content: ''; */
+/*     position: absolute; */
+/*     left: 0; */
+/*     right: 0; */
+/*     bottom: 0; */
+/*     top: 0; */
+/*     margin: calc(var(--spectrum-combobox-focus-indicator-gap) * -1); */
+/*     border-radius: calc(var(--spectrum-combobox-border-radius) + var(--spectrum-combobox-focus-indicator-gap)); */
+/*     border-color: transparent; */
+/*     transition: box-shadow var(--spectrum-animation-duration-100) ease-in-out, border-color var(--spectrum-animation-duration-100) ease-in-out; */
+/*   } */
+
+/*   &.is-keyboardFocused:not(.spectrum-InputGroup--quiet) { */
+/*     &:after { */
+/*       box-shadow: 0 0 0 var(--spectrum-combobox-focus-indicator-thickness) var(--spectrum-combobox-focus-indicator-color); */
+/*     } */
+
+/*     .spectrum-InputGroup-textfield:after { */
+/*       display: none; */
+/*     } */
+/*   } */
+
+/*   &.is-keyboardFocused.spectrum-InputGroup--quiet { */
+/*     &:after { */
+/*       margin: 0; */
+/*       box-shadow: none; */
+/*       border-radius: 0; */
+/*       border-bottom: 2px solid var(--spectrum-combobox-focus-indicator-color); */
+/*       bottom: calc(-1 * var(--spectrum-combobox-focus-indicator-gap)); */
+/*     } */
+/*   } */
+
+/*   /\* Input Group *\/ */
+/*   &.spectrum-InputGroup--quiet { */
+/*     border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius); */
+
+/*     .spectrum-InputGroup-textfield { */
+/*       min-inline-size: 0; */
+/*       inline-size: var(--spectrum-datepicker-input-width-quiet); */
+
+/*       &:first-of-type { */
+/*         inline-size: var(--spectrum-datepicker-range-input-width-quiet-first); */
+/*       } */
+/*     } */
+/*     .spectrum-InputGroup-button { */
+/*       border-radius: var(--spectrum-combobox-quiet-fieldbutton-border-radius); */
+/*     } */
+/*   } */
+/*   /\* Datetime Range *\/ */
+/*   &.spectrum-Datepicker--datetimeRange { */
+/*     /\* Inputs *\/ */
+/*     .spectrum-InputGroup-textfield { */
+/*       inline-size: var(--spectrum-datepicker-datetime-input-width); */
+/*       min-inline-size: 0; */
+
+/*       &:first-of-type { */
+/*         inline-size: var(--spectrum-datepicker-datetime-input-width-first); */
+/*       } */
+/*     } */
+
+/*     &.spectrum-InputGroup--quiet { */
+/*       .spectrum-InputGroup-textfield { */
+/*         inline-size: var(--spectrum-datepicker-datetime-quiet-input-width); */
+
+/*         &:first-of-type { */
+/*           inline-size: var( */
+/*             --spectrum-datepicker-datetime-quiet-input-width-first */
+/*           ); */
+/*         } */
+/*       } */
+/*     } */
+/*   } */
+
+/*   /\* Inputs *\/ */
+/*   .spectrum-InputGroup-textfield { */
+/*     flex: initial; */
+/*     min-inline-size: 0; */
+/*     inline-size: var(--spectrum-datepicker-input-width); */
+
+/*     &:first-of-type { */
+/*       inline-size: var(--spectrum-datepicker-range-input-width-first); */
+/*     } */
+/*     &.is-invalid { */
+/*       .spectrum-InputGroup-input { */
+/*         padding-inline-end: var(--spectrum-inputgroup-generic-padding); */
+/*       } */
+/*     } */
+/*   } */
+/*   .spectrum-InputGroup-input { */
+/*     inline-size: 100%; */
+
+/*     &.spectrum-Datepicker-startField { */
+/*       border-inline-end: 0; */
+/*       border-top-right-radius: 0; */
+/*       border-bottom-right-radius: 0; */
+/*       padding-inline-end: var(--spectrum-inputgroup-generic-padding); */
+/*     } */
+/*     &.spectrum-Datepicker-endField { */
+/*       border-inline-start: 0; */
+/*       border-top-left-radius: 0; */
+/*       border-bottom-left-radius: 0; */
+/*       padding-inline-start: var(--spectrum-inputgroup-generic-padding); */
+/*     } */
+/*   } */
+/*   /\* Em dash *\/ */
+/*   .spectrum-Datepicker-rangeDash { */
+/*     line-height: var(--spectrum-datepicker-range-dash-line-height); */
+/*     padding-block-start: var(--spectrum-datepicker-range-dash-padding-top); */
+/*     flex: initial; */
+/*     inline-size: 0; */
+/*     z-index: 1; */
+/*     &:before { */
+/*       content: "–"; */
+/*       display: inline-block; */
+/*       margin-block: 0; */
+/*       margin-inline: var(--spectrum-datepicker-range-dash-margin-left); */
+/*       overflow: hidden; */
+/*       text-align: center; */
+/*       vertical-align: middle; */
+/*       inline-size: var(--spectrum-global-dimension-static-font-size-100); */
+/*     } */
+/*   } */
+/*   /\* Focus ring *\/ */
+/*   &.spectrum-InputGroup--quiet { */
+/*     .spectrum-Datepicker--rangeDash { */
+/*       &:before { */
+/*         margin-inline-start: var(--spectrum-datepicker-range-dash-margin-left); */
+/*       } */
+/*     } */
+/*   } */
+/* } */
